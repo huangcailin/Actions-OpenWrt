@@ -18,8 +18,13 @@ echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.defau
 echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
 echo 'src-git small https://github.com/kenzok8/small' >>feeds.conf.default
 
-echo 'src-git dcc2-wiwiz https://github.com/wiwizcom/WiFiPortal/tree/main/dcc2-wiwiz' >>feeds.conf.default
-echo 'src-git eqos-master-wiwiz https://github.com/wiwizcom/WiFiPortal/tree/main/eqos-master-wiwiz' >>feeds.conf.default
-echo 'src-git wifidog-wiwiz https://github.com/wiwizcom/WiFiPortal/tree/main/wifidog-wiwiz' >>feeds.conf.default
+git clone https://github.com/wiwizcom/WiFiPortal.git
+cp -r WiFiPortal/dcc2-wiwiz ./package/
+cp -r WiFiPortal/eqos-master-wiwiz ./package/
+cp -r WiFiPortal/wifidog-wiwiz ./package/
+
+#echo 'src-git dcc2-wiwiz https://github.com/wiwizcom/WiFiPortal/tree/main/dcc2-wiwiz' >>feeds.conf.default
+#echo 'src-git eqos-master-wiwiz https://github.com/wiwizcom/WiFiPortal/tree/main/eqos-master-wiwiz' >>feeds.conf.default
+#echo 'src-git wifidog-wiwiz https://github.com/wiwizcom/WiFiPortal/tree/main/wifidog-wiwiz' >>feeds.conf.default
 
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
